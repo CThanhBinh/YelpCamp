@@ -15,8 +15,9 @@ const passport=require('passport')
 const localStrategy=require('passport-local')
 const mongoose = require('mongoose');
 const User=require("./models/user")
-const MongoStore = require('connect-mongo');
-const dbUrl=process.env.DB_URL || 'mongodb://localhost:27017/yelp-camp'
+// const MongoStore = require('connect-mongo');
+const dbUrl='mongodb://localhost:27017/yelp-camp'
+// const dbUrl=process.env.DB_URL || 'mongodb://localhost:27017/yelp-camp'
 
 main().catch(err => console.log(err));
 async function main() {
@@ -36,13 +37,14 @@ app.set("views",path.join(__dirname,"views"))
 app.use(express.urlencoded({extended:true}))
 app.use(methodOverride('_method'))
 app.use(express.static(path.join(__dirname,"public")))
-const store=MongoStore.create({
-  mongoUrl:dbUrl,
-  touchAfter:24*3600
-})
+
+// const store=MongoStore.create({
+//   mongoUrl:dbUrl,
+//   touchAfter:24*3600
+// })
 const secret=process.env.SECRET ||"thisismysecret"
 const mySecret={
-  store,
+  // store,
   secret,
   resave:false,
   saveUninitialized:false,
