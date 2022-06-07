@@ -1,63 +1,36 @@
 <% layout('layouts/boilerplate') %> 
-
-<div class="row">
-    <div class="text-center">
-        <h1>New Campground</h1>
-    </div>
-    <div class="col-6 offset-3">
-        <form action="/campgrounds" method="post" novalidate class="needs-validation" enctype="multipart/form-data">
-        <div class="mb-3">
+<h2 class="text-center mt-3 mb-5">New Campground</h2>
+<div class="row container-fluid">
+        <form action="/campgrounds" method="post" novalidate  class="col-4 offset-4 needs-validation" enctype="multipart/form-data">
             <label for="title" class="form-label">Title</label>
+        <div class="input-group mb-3">
             <input type="text" class="form-control"name="title" id="title" required>
-        <div class="valid-feedback">
-            looks good!
         </div>
-        <div class="invalid-feedback">
-            Please provide a valid Title
-        </div>
-        </div>
-        <div class="mb-3">
-            <label for="location" class="form-label">Location</label>
+        <label for="location" class="form-label">Location</label>
+        <div class="input-group mb-3">
             <input type="text"  class="form-control" name="location" id="location" required>
-                   <div class="valid-feedback">
-            looks good!
         </div>
-        <div class="invalid-feedback">
-            Please provide a valid Title
-        </div>
-        </div>
-        <div class=" mb-3">
-            <label class="form-label" for="inputGroupFile01">Image</label>
+        <label class="form-label" for="inputGroupFile01">Image</label>
+        <div class="input-group mb-3">
             <input type="file" class="form-control " name="image" id="inputGroupFile01"   multiple >
         </div> 
-        <div class=" mb-3">
-            <label for="price" class="form-label">Campground Price</label>
+        <label for="price" class="form-label">Campground Price</label>
+        <div class="input-group mb-3">
             <div class="input-group">
                 <span class="input-group-text">$</span>
-                <input type="text"  class="form-control" name="price" id="priceS"placeholder="0.00" min="0" required> 
-                       <div class="valid-feedback">
-            looks good!
-        </div>
-        <div class="invalid-feedback">
-            Please provide a valid Title
-        </div>
+                <input type="text"  class="form-control" name="price" id="priceS"placeholder="0.00" min="0" required>             
             </div> 
         </div>
-        <div class="mb-3">
-            <label for="description" class="form-label">Description</label>
-            <textarea type="text"  class="form-control" name="description" id="description" required></textarea >
-            <div class="valid-feedback">
-                looks good!
-            </div>
-            <div class="invalid-feedback">
-                Please provide a valid Title
-            </div>
+        <label for="description" class="form-label">Description</label>
+        <div class="input-group mb-3">
+            <textarea type="text"  class="form-control" name="description" id="description" required></textarea >           
         </div>
-        <button class="btn btn-success">Add Campground</button>
+        <button class="btn btn-primary">Post</button>
         </form>
-        <h3><a href="/campgrounds">All Campground</a></h3>
     </div>
 </div>
+
+
 
 
     
