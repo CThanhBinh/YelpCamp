@@ -11,6 +11,6 @@ practice about Nodejs + express + mongoDB Deploy by heroku
 
 - use mongoDb for Database 
 
--boostrap + css for layout
+- boostrap + css for layout
 
 - deploy server on Heroku and db on Mongodb atlas
